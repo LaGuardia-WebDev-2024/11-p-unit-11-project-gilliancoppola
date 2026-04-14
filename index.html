@@ -21,24 +21,24 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <button id="mem1-button">Memory #1</button>
-    <button id="mem2-button">Memory #2</button>
-    <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3 Memories of <span>This Year</span></h1>
+    <button id="gui1-button">Guitar #1</button>
+    <button id="gui2-button">Guitar #2</button>
+    <button id="gui3-button">Guitar #3</button>
+    <h1>My Top 3 Guitar Choices <span>This Year</span></h1>
     <ol>
       <li>
-        <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <h3 id="gui1">Guitar #1--The PRS SE DGT Standard David Grissom</h3>
+        <p id="prs">More about this guitar.</p>
       </li>
 
       <li>
-        <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <h3 id="gui2">Guitar #2--The Epiphone Les Paul Standard '50s Figured</h3>
+        <p id="epi">More about this guitar.</p>
       </li>
 
       <li>
-        <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <h3 id="gui3">Guitar #3--Fender Standard Telecaster</h3>
+        <p id="tele">More about this guitar.</p>
       </li>
     </ol>
 
@@ -46,19 +46,21 @@ Select ONE Additional
     <script>
 
       // ======================== Button #1
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+      $("#gui1-button").click(function () {
+        $("#gui1").css("color", "purple");
+        $("#prs").text("This PRS SE DGT is a very versatile and high-quality guitar.")
       });
 
       // ======================== Button #2
-      $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+      $("#gui2-button").click(function () {
+        $("#gui2").css("color", "blue");
+         $("#epi").text("This Epiphone Les Paul is")
       });
 
       // ======================== Button #3
-      $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-        $("#mem3").text("Coding Parties! 🎉");
+      $("#gui3-button").click(function () {
+        $("#gui3").css("color", "green");
+        $("#tele").text("The Fender Telecaster is");
       });
 
 
