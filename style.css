@@ -2,13 +2,30 @@
 
 /* ======================== CSS Rule #1 */
 html {
-  background-color: rgb(230, 147, 98);
   padding-left: 20px;
 }
 
 /* ======================== CSS Rule #2 */
 h1 {
   font-family: "Poetsen One", sans-serif;
+  color:rgb(14, 77, 102);
+}
+
+.text{
+ background-color:rgb(82, 96, 133, 0.85);
+        border: 2px solid;
+        border-color: rgb(202, 80, 23);
+        width: fit-content;
+        border-radius: 15px;
+        padding:8px;
+}
+
+#smallhead{
+  font-family: "Poetsen One", sans-serif;
   color:rgb(14, 77, 102)
+}
+
+p{
+  color: rgb(48, 3, 3);
 }
 
