@@ -2,14 +2,14 @@
 Requirements
 [ x ] $() Select by Element, ID AND Class 
 [ x ] Use Three Different jQuery Methods 
-[  ] Add Five CSS Declarations
+[ x ] Add Five CSS Declarations
 [ x ] Include Three Images
 
 Select ONE Additional 
 [ no ] Feature 1 - Use .hide() & .show() method
 [ no ] Feature 2 - Use .addClass() method
 [ no ] Feature 3 - Use .slideDown() method
-[ no ] Feature 4 - Use .mouseover() method
+[ yes ] Feature 4 - Use .mouseover() method
 [ no ] Feature 5 - Use .fadeIn() method
 -->
 
@@ -30,21 +30,21 @@ Select ONE Additional
       <li>
         <h3 id="gui1">Guitar #1--The PRS SE DGT Standard David Grissom</h3>
         <p id="prs" class="text">More about this guitar.</p>
-        <img id="prsimg" src="https://media.sweetwater.com/m/products/image/19e0ac1a5fQeWJgX7LggCSS533M5VVwspT0iFt9B.wm-dh.jpg?quality=82&height=750&ws=s&ha=19e0ac1a5f2c516d"
+        <img class="prsimg" src="https://media.sweetwater.com/m/products/image/19e0ac1a5fQeWJgX7LggCSS533M5VVwspT0iFt9B.wm-dh.jpg?quality=82&height=750&ws=s&ha=19e0ac1a5f2c516d"
         width="350">
       </li>
 
       <li>
         <h3 id="gui2">Guitar #2--The Epiphone Les Paul Standard '50s Figured</h3>
         <p id="epi" class="text">More about this guitar.</p>
-        <img id="epiimg" src="https://media.guitarcenter.com/is/image/MMGS7/M13614000001000-02-600x600.jpg"
+        <img class="epiimg" src="https://media.guitarcenter.com/is/image/MMGS7/M13614000001000-02-600x600.jpg"
         width="480">
       </li>
 
       <li>
         <h3 id="gui3">Guitar #3--Fender Standard Telecaster</h3>
         <p id="tele" class="text">More about this guitar.</p>
-        <img id="telimg" src="https://media.sweetwater.com/m/products/image/61131c7cbf6ZLMSepuRJsYtWFcrDffVkaoB8VoDd.wm-dh.jpg?quality=82&height=750&ws=s&ha=61131c7cbfc5ab14"
+        <img class="telimg" src="https://media.sweetwater.com/m/products/image/f978c73a3fS5Wz4i5I06xl05yp9CGOCNLnXhdMf5.wm-dh.jpg?quality=82&height=750&ws=s&ha=f978c73a3fbf4c9a"
         width="380">
       </li>
     </ol>
@@ -52,63 +52,52 @@ Select ONE Additional
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
 
-$("#prsimg").hide();
-$("#epiimg").hide();
-$("#telimg").hide();
+
+
+$(".prsimg").hide();
+$(".epiimg").hide();
+$(".telimg").hide();
 
 $("html").css("background-color", "rgb(230, 147, 98)");
 
       // ======================== Button #1
       $("#gui1-button").click(function () {
-        $("#prsimg").show(2000);
+        $(".prsimg").show(2000);
         $("#gui1").css("color", "brown");
         $("#prs").text("This PRS SE DGT is a very versatile and high-quality guitar. It is based off of Paul Reed Smith's designs and is a smaller company dedicated to quality. The guitar has humbucker pickups and a tremolo bridge, for a slightly more fine-tuned setup.")
       });
 
-      $("prsimg").mouseover(function(){
-          $("img").attr("src","https://media.sweetwater.com/m/products/image/ce937a716dGcJz5NHDPMZJkODzpK1iDxm7CS31GL.wm-dh.jpg?quality=82&height=750&ws=s&ha=ce937a716dd3778d")
+      $(".prsimg").mouseover(function(){
+          $(".prsimg").attr("src","https://media.sweetwater.com/m/products/image/ce937a716dGcJz5NHDPMZJkODzpK1iDxm7CS31GL.wm-dh.jpg?quality=82&height=750&ws=s&ha=ce937a716dd3778d")});
 
-      });
-
-      $("prsimg").mouseout(function(){
-          $("img").attr("src","https://media.sweetwater.com/m/products/image/19e0ac1a5fQeWJgX7LggCSS533M5VVwspT0iFt9B.wm-dh.jpg?quality=82&height=750&ws=s&ha=19e0ac1a5f2c516d")
-
-      });
+      $(".prsimg").mouseout(function(){
+         $(".prsimg").attr("src","https://media.sweetwater.com/m/products/image/19e0ac1a5fQeWJgX7LggCSS533M5VVwspT0iFt9B.wm-dh.jpg?quality=82&height=750&ws=s&ha=19e0ac1a5f2c516d")});
 
       // ======================== Button #2
       $("#gui2-button").click(function () {
-        $("#epiimg").show(2000);
+        $(".epiimg").show(2000);
         $("#gui2").css("color", "green");
          $("#epi").text("This Epiphone Les Paul is one of the most classic rock n' roll guitars, but more affordable than the iconic Gibson Les Paul with the same great warm sound. It also features humbuckers, but the bridge is a Tune-O-Matic and does not need as much adjustment as a tremolo.")
       });
 
-      $("epiimg").mouseover(function(){
-          $("img").attr("src","https://media.guitarcenter.com/is/image/MMGS7/M13614000001000-00-600x600.jpg")
+      $(".epiimg").mouseover(function(){
+          $(".epiimg").attr("src","https://media.guitarcenter.com/is/image/MMGS7/M13614000001000-00-600x600.jpg")});
 
-      });
-
-      $("epiimg").mouseout(function(){
-          $("img").attr("src","https://media.guitarcenter.com/is/image/MMGS7/M13614000001000-02-600x600.jpg")
-
-      });
+      $(".epiimg").mouseout(function(){
+          $(".epiimg").attr("src","https://media.guitarcenter.com/is/image/MMGS7/M13614000001000-02-600x600.jpg")});
 
       // ======================== Button #3
       $("#gui3-button").click(function () {
-        $("#telimg").show(2000);
+        $(".telimg").show(2000);
         $("#gui3").css("color", "orange");
         $("#tele").text("The Fender Telecaster is another classic rock n' roll guitar, but also commonly used in country music. Its tone is uniquely sharp and twangy. This guitar has two single-coil pickups and the vintage models have an 'ashtray' bridge.");
       });
 
-      
- $("telimg").mouseover(function(){
-          $("img").attr("src","https://media.sweetwater.com/m/products/image/dc6e76601f0qPAzNlc700RQkXrr4kkuR7rc1bsa4.wm-dh.jpg?quality=82&height=750&ws=s&ha=dc6e76601fe14f72")
+ $(".telimg").mouseover(function(){
+          $(".telimg").attr("src","https://media.sweetwater.com/m/products/image/23ede5d8d99a28PARcwM6Pw55CCRhhXKzijCJXnB.wm-dh.jpg?quality=82&height=750&ws=s&ha=23ede5d8d96f554e")});
 
-      });
-
-      $("telimg").mouseout(function(){
-          $("img").attr("src","https://media.sweetwater.com/m/products/image/61131c7cbf6ZLMSepuRJsYtWFcrDffVkaoB8VoDd.wm-dh.jpg?quality=82&height=750&ws=s&ha=61131c7cbfc5ab14")
-
-      });
+      $(".telimg").mouseout(function(){
+          $(".telimg").attr("src","https://media.sweetwater.com/m/products/image/f978c73a3fS5Wz4i5I06xl05yp9CGOCNLnXhdMf5.wm-dh.jpg?quality=82&height=750&ws=s&ha=f978c73a3fbf4c9a") });
 
 
 
